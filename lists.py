@@ -9,6 +9,8 @@ def remove_elements(lista):
             del lista[0]
             del lista[4]
             return lista
+        elif len(lista)==0:
+            return lista
         else:
             del lista[0]
             return lista
@@ -33,9 +35,5 @@ def check_lists(list_to_compare1, list_to_compare2):
     else:
         return False
 
-def lists_of_lists(list_of_lists_to_modify):
-    if len(list_of_lists_to_modify[0])>=2 and len(list_of_lists_to_modify[1])>=4 and len(list_of_lists_to_modify[2])>=2:
-        list_of_lists_to_modify[0]= list_of_lists_to_modify[0][0:2]
-        list_of_lists_to_modify[1]=list_of_lists_to_modify[1][1:4]
-        list_of_lists_to_modify[2]=list_of_lists_to_modify[2][-2:]
-        return list_of_lists_to_modify
+def list_of_lists(list_of_lists_to_modify):
+    return [list_of_lists_to_modify[0][0:2], list_of_lists_to_modify[1][1:4],list_of_lists_to_modify[2][-2:]]
